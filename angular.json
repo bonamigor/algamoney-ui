@@ -27,7 +27,8 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova-light/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": []
           },
@@ -122,7 +123,6 @@
           }
         }
       }
-<<<<<<< HEAD
     }
   },
   "defaultProject": "algamoney-ui",
@@ -130,8 +130,3 @@
     "analytics": "5a3ec22b-c172-4376-b831-352e5683424d"
   }
 }
-=======
-    }},
-  "defaultProject": "algamoney-ui"
-}
->>>>>>> 99539f10c77a834d1849f7c83b68ae77323f601e
