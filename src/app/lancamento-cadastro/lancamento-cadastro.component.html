@@ -6,12 +6,16 @@
         <h1>Novo Lançamento</h1>
       </div>
 
+      <div class="ui-g-12">
+        <p-selectButton [options]="tipos" #tipo></p-selectButton>
+      </div>
+
       <div class="ui-g-6 ui-md-3 ui-fluid">
         <label>Vencimento</label>
         <p-calendar dateFormat="dd/mm/yy"></p-calendar>
       </div>
       <div class="ui-g-6 ui-md-3 ui-fluid">
-        <label>Recebimento</label>
+        <label>{{ tipo.value === 'RECEITA' ? 'Recebimento' : 'Pagamento'}}</label>
         <p-calendar dateFormat="dd/mm/yy"></p-calendar>
       </div>
       <div class="ui-g-12 ui-md-9 ui-fluid">
@@ -20,15 +24,15 @@
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Valor</label>
-        <input pInputText type="text" placeholder="0,00">
+        <p-inputNumber currency="BRL" mode="currency" locale="pt-BR" [minFractionDigits]="2" placeholder="R$ 00,00"></p-inputNumber>
       </div>
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Categoria</label>
-        <input pInputText type="text">
+        <p-dropdown [options]="categorias" placeholder="Selecione"></p-dropdown>
       </div>
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Pessoa</label>
-        <input pInputText type="text">
+        <p-dropdown [options]="pessoas" [filter]="true" placeholder="Selecione"></p-dropdown>
       </div>
       <div class="ui-g-12 ui-fluid">
         <label>Observação</label>
@@ -36,7 +40,7 @@
       </div>
       <div class="ui-g-12">
         <button pButton type="submit" label="Salvar" style="margin-right: 10px;"></button>
-        <button pButton type="submit" label="Novo" style="margin-right: 10px;" class="ui-button-info"></button>
+        <button pButton type="submit" label="Novo" style="margin-right: 10px;" class="p-button-info"></button>
         <a href="javascript:;">Voltar para a pesquisa</a>
       </div>
     </div>

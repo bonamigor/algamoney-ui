@@ -7,6 +7,7 @@ import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
 import {TooltipModule} from 'primeng/tooltip';
 import {CalendarModule} from 'primeng/calendar';
+import { SelectButtonModule } from 'primeng/selectbutton';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
@@ -16,6 +17,9 @@ import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.co
 import { FormsModule } from '@angular/forms';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import {DropdownModule} from 'primeng/dropdown';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.component';
 
 
 @NgModule({
@@ -25,6 +29,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     NavbarComponent,
     PessoasPesquisaComponent,
     LancamentoCadastroComponent,
+    CadastroPessoaComponent,
 
   ],
   imports: [
@@ -38,6 +43,9 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     FormsModule,
     InputTextareaModule,
     CalendarModule,
+    SelectButtonModule,
+    DropdownModule,
+    InputNumberModule,
     AppRoutingModule
   ],
   providers: [],
